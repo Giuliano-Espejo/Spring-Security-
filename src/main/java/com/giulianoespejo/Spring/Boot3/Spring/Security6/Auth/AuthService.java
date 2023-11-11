@@ -17,12 +17,12 @@ import lombok.RequiredArgsConstructor;
 public class AuthService {
     private final UserRepository userRepository;
     private final JwtService jwtService;
-
+    private final PasswordEncoder passwordEncoder;
 
     public AuthResponse register(RegisterRequest request) {
         User user = User.builder()
                 .username(request.getUsername())
-                .password( request.getPassword())
+                .password(passwordEncoder.encode(request.getPassword()))
                 .firstname(request.getFirstname())
                 .lastname(request.lastname)
                 .country(request.getCountry())
