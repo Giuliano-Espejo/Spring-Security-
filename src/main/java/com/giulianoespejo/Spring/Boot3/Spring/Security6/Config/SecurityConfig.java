@@ -1,6 +1,6 @@
 package com.giulianoespejo.Spring.Boot3.Spring.Security6.Config;
 
-import com.giulianoespejo.Spring.Boot3.Spring.Security6.Jwt.JwtAuthenticationFiltrer;
+import com.giulianoespejo.Spring.Boot3.Spring.Security6.Jwt.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtAuthenticationFiltrer jwtAuthenticationFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final AuthenticationProvider authProvider;
 
     @Bean
