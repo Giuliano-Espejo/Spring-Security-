@@ -9,8 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class DemoController {
-    @PostMapping(value = "demo")
-    public String welcome(){
-        return "Welcome form secure endpont";
+    @PostMapping(value = "demoUser")
+    public String welcome()
+    {
+        return "Bienvenido desde el endpoint seguro";
+    }
+
+    @PostMapping(value = "demoAdmin")
+    public String welcomeAdmin()
+    {
+        return "Bienvenido desde el endpoint seguro ADMIN";
     }
 }

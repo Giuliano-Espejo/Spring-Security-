@@ -37,6 +37,7 @@ public class AuthService {
                 .lastname(request.lastname)
                 .country(request.getCountry())
                 .role(Role.USER)
+                //.role(Role.ADMIN)
                 .build();
 
         userRepository.save(user);
